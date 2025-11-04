@@ -1,0 +1,130 @@
+Devops cmd
+
+Day 1
+1. git clone url link (https://github.com/Gulshan27694/Addon-CIMAGE.git)
+2. ls
+3. cd (folder name)
+4. git status :- git status is used to file status which are track or untrack.
+5. git branch
+5. git checkout -b "feature-dev"    :- switch out a new branch
+6. git add file.txt
+7. git add .   # int
+8.  git commit -m "added frontend and backend code"   # commit code
+9. git push
+git push --set-upstream origin feature-dev
+=========================================================================
+Day 2
+
+CI/CD pipeline :- we have to create yaml file (main.yaml) in which we will be configure all the automation steps which need to be executed .
+> name of the automation
+ name: Deploy to Staging (EC2)
+on:
+  push:
+      branches:
+             -main
+             -develop
+
+Q. How to deploy the code in AWS EC2
+
+
+*kubernativs
+*leamda
+
+================================================
+create a repo - devops-01
+git clone <url>
+add all the codes to main branch
+git status - untracked
+git add .
+git commit -m ""
+git push
+================================
+run on local server
+
+open the cmd where files
+check python --version
+create virtual env : python -m venv env
+activate venv : env\Scripts\activate.bat
+Install all python packages :python -m pip install -r requirements.txt
+Run server : python manage.py runserver
+
+=================================
+Ec2- create
+Git Hub actioins - secrets add
+
+
+
+==============================================================================
+Day - 3
+
+AWS:- aws is a cloud plateform which is provided by amazon and it work on pay as a go model
+aws provided a verity of services , database , store, server and scalable service.
+
+
+application
+1.--  frontend   --  Deploy option :- S3 bucket, Amplify
+2.--   backend   -- EC2,EKS(elastic Kubernetes services) , Lambda (server less)
+3.--   database  -- Server(EC2, EKS) and
+--  load balancer    --batch processing
+
+IAM - identity access management it is used to create user and their permission
+
+
+=============================
+go to aws account and search ec2
+click on the ec2
+click on the launch instance
+follow the step to cricket instance
+name of the server -- devops-3rdyear
+selection of os -- ubuntu
+             free tier eligible
+create a key pair
+fill the all box
+
+ssh -i (name of pmp file)@id address ipv4
+
+============================================================
+CI/CD pipeline Create
+
+1. deplopment code along with yml file
+2. ec2 instance
+3. step
+we have to push code our local repo
+we have to configure the scrit setting on the git hub
+ : ec2 user
+ : ec2 ssh key
+ : ec2 host
+
+
+
+
+==========================================================
+Day :04
+
+--we have convert the same repo in docker container.
+--we have to update the will.yml file.
+--how to on kubarnative in EC2.
+
+
+
+
+==============================================================
+Docker components
+image
+container
+network
+volume
+
+docker file   # The Dockerfile defines how to build your application image
+2. docker compose file    # The docker-compose.yml file defines how multiple Docker containers work together  and responsible for run .
+
+
+
+docker build -t todo-app:latest .
+
+docker run -d -p 800:8000 --name todo-container todo-app:latest
+
+docker image ls
+
+
+ 
